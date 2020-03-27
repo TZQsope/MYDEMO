@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>demo4</title>
+    <link rel="stylesheet" href="demo4.css" media="screen" />
+</head>
+
+<body>
+    <ul>
+        <li> <a href="javascript:popup('http://www.example.com/');">example方法一</a></li>
+        <li><a href="http://www.example.com/" onclick="popup(this.getAttribute('href'));return false;">example方法二</a>
+        </li>
+        <li><a href="http://www.example.com/" onclick="popup(this.href);return false;">example方法三</a></li>
+    </ul>
+    <a href="http://www.example.com/" class="popup">example方法四</a>
+    <script src="demo4.js"></script>
+</body>
+
+</html>
