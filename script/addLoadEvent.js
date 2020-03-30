@@ -13,3 +13,5 @@ function addLoadEvent(func) {
         }
     }
 }
+
+// addLoadEvent(positionMessage);
