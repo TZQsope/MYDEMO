@@ -1,0 +1,15 @@
+
+/* p{
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+} */
+p#example{
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}
+.intro{
+    font-weight: bold;
+    font-size: 1.2em;
+    color: green;
+}
