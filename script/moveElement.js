@@ -5,9 +5,14 @@ function moveElement(elementId, finalX, finalY, interval) {
     if (elem.movement) {
         clearTimeout(elem.movement);
     }
+    if (!elem.style.left) {
+        elem.style.left = "0px";
+    }
+    if (!elem.style.top) {
+        elem.style.top = "0px"
+    }
     var xpos = parseInt(elem.style.left);
     var ypos = parseInt(elem.style.top);
-
     if (xpos == finalX & ypos == finalY) {
         return true;
     }
@@ -24,7 +29,7 @@ function moveElement(elementId, finalX, finalY, interval) {
         ypos = ypos + dist;
     }
     if (ypos > finalY) {
-        var dist = Math.ceil(( ypos-finalY ) / 10);
+        var dist = Math.ceil((ypos - finalY) / 10);
         ypos = ypos - dist;
     }
     elem.style.left = xpos + "px";
@@ -32,5 +37,3 @@ function moveElement(elementId, finalX, finalY, interval) {
     var repeat = "moveElement('" + elementId + "'," + finalX + "," + finalY + "," + interval + ")";
     elem.movement = setTimeout(repeat, interval);
 }
-
-addLoadEvent(moveElement)

@@ -14,7 +14,6 @@ function showAbbrList() {
         if(currentAbbr.childNodes.length<1) continue;
         var definition = currentAbbr.getAttribute("title");
         var key = currentAbbr.lastChild.nodeValue;
-        // console.log(key, definition)
         defs[key] = definition;
     }
     //创建定义列表
